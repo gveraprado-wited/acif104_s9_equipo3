@@ -41,8 +41,8 @@ Requisitos: Python 3.14 y Git (detalle del entorno probado, hardware y
 compatibilidad de versiones en `configuracion_entorno.md`).
 
 ```powershell
-git clone https://github.com/gveraprado-wited/acif104-churn-grupo3.git
-cd acif104-churn-grupo3
+git clone https://github.com/gveraprado-wited/acif104_s9_equipo3.git
+cd acif104_s9_equipo3
 python -m venv .venv
 .venv\Scripts\Activate.ps1
 pip install -r requirements.txt
