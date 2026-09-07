@@ -63,7 +63,7 @@ El entorno usa versiones muy recientes (Python 3.14.6, numpy 2.x, pandas 3.0), p
 - `pip install shap` instala sin problemas (versión 0.52.0), aunque baja `numpy` de 2.5.1 a 2.4.6 para satisfacer sus dependencias (compatible con el resto del proyecto, sin romper nada).
 - `pip install streamlit fastapi uvicorn pytest` instala sin problemas (streamlit 1.60.0, incluye `pyarrow` con wheel disponible para esta versión de Python; `fastapi` trae `pydantic` 2.13.4 como dependencia).
 - Prueba combinada: cargar `artifacts/preprocesador.joblib` y `models/xgboost_final.joblib`, predecir sobre `X_val`, calcular valores SHAP con `TreeExplainer` y pasar los mismos datos por una capa de PyTorch — todo funciona correctamente en conjunto.
-- Suite de pruebas del backend: `pytest tests/` — **43 pruebas, todas en verde**, sin mocks (cargan los artefactos reales).
+- Suite de pruebas del backend: `pytest tests/` — **61 pruebas, todas en verde**, sin mocks (cargan los artefactos reales).
 - Verificación de equivalencia: se comparó, para 20 clientes reales del conjunto de prueba, la probabilidad que entrega la API contra la que se obtiene cargando `preprocesador.joblib` y `xgboost_refinado.joblib` directamente (como en los notebooks) — diferencia 0,0 en los 20 casos.
 - Prueba de extremo a extremo con navegador real (Playwright, herramienta de verificación puntual, no es dependencia del proyecto): formulario, ficha de cliente, explicabilidad global y monitoreo probados en Chromium headless, sin errores de consola.
 
